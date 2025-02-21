@@ -1,170 +1,130 @@
-/* Apply background image to the entire page */
+/* General Reset */
 body {
-    background: url('images/background.jpg') no-repeat center center/cover;
-    background-attachment: fixed; /* Keeps background fixed while scrolling */
-    color: black; /* Ensures text is visible */
-    font-family: Arial;sans-serif;
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: #333;
+    line-height: 1.6;
 }
 
+/* Header Styling */
 header {
-    background-image: url('images/your-background-image.jpg'); /* Same background image */
-    background-size: cover;
-    background-position: center;
-    text-align: center; 
-    background-repeat: no-repeat;
-    padding: 20px;
+    background: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
 }
 
 header h1 {
-    font-size: 3em;
-    font-weight: 700;
-    color: black; /* White text color */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-}
-/* Navigation Links */
-nav a {
-    font-size: 1.2em;
-    color: #f0f0f0;
-    text-decoration: none;
-    transition: color 0.3s ease;
+    font-size: 2.5em;
 }
 
-/* Navigation Links Hover Effect */
-nav a:hover {
-    color: #ff7e5f;
-}
-
-
-nav ul {
-    list-style-type: none;
+header nav ul {
+    list-style: none;
     padding: 0;
 }
 
-nav ul li {
+header nav ul li {
     display: inline;
     margin: 0 15px;
 }
 
-nav ul li a {
-    color: black;
+header nav ul li a {
+    color: white;
     text-decoration: none;
     font-weight: bold;
 }
 
-section {
-    padding: 60px 20px;
+header nav ul li a:hover {
+    color: #ff7e5f;
+}
+
+/* About Section */
+section#about {
+    padding: 50px;
     text-align: center;
+}
+
+section#about p {
+    font-size: 1.2em;
+    max-width: 800px;
     margin: 0 auto;
-    width: 80%;
+    color: #555;
 }
 
-#about, #projects, #contact {
-    margin-bottom: 80px; /* More space between sections */
-    font-weight: bold;
-
+/* Projects Section */
+section#projects {
+    padding: 50px;
+    background: #f4f4f4;
+    text-align: center;
 }
-
-.profile-container {
-    display: flex;
-    align-items: center; /* Vertically center content */
-    justify-content: flex-start; /* Align content to the left */
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
-}
-
-.profile-photo {
-    width: 400px; /* Set width of the rectangle */
-    height: 450px; /* Set height of the rectangle */
-    object-fit: cover; /* Ensures the image covers the area without distortion */
-    border-radius: 50%; /* Make it circular */
-    object-fit: cover;
-    border: 5px solid transparent;
-    background-image: linear-gradient(white, white), url('images/my-photo.jpg');
-    border: 5px solid white; /* White border */
-    background-clip: content-box, border-box;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Light shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
-}
-
-}
-.profile-photo:hover {
-    border: 5px solid #ff7e5f; /* Glowing border */
-    transform: scale(1.1); /* Slightly zoom the image */
-    filter: grayscale(0%);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Add shadow around the image */
-}
-
-
-.bio {
-    max-width: 600px;
-    text-align: left;
-    margin-top: 20px;
-    font-size: 1.2em; /* Increase text size */
-    line-height: 1.2; /* Improve line spacing for readability */
-    margin-left: 30px;
-}
-.bio p {
-    font-size: 1.0em; /* Larger text for better readability */
-    font-weight: 300; /* Regular weight */
-    line-height: 1.6; /* Increased line height */
-    font-family: 'Roboto', sans-serif;
-    color: black; /* Light text color */
-}
-
 
 .project-grid {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .project-card {
-    width: 45%;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
     padding: 20px;
-    margin: 10px 0;
-    background-color: #f4f4f4;
-    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-#contact form {
+.project-card h3 {
+    margin-top: 0;
+    color: #ff7e5f;
+}
+
+/* Contact Form */
+section#contact {
+    padding: 50px;
+    background: white;
+}
+
+section#contact form {
     max-width: 500px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
 }
 
-#contact form label {
-    font-size: 1.2em;
-    margin-bottom: 5px;
+section#contact .form-group {
+    margin-bottom: 20px;
+    text-align: left;
 }
 
-#contact form input, #contact form textarea {
+section#contact input,
+section#contact textarea {
+    width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 1em;
 }
 
-#contact form button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: black;
+section#contact button {
+    background: #ff7e5f;
+    color: white;
     border: none;
+    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1.2em;
 }
 
+section#contact button:hover {
+    background: #feb47b;
+}
+
+/* Footer */
 footer {
-    text-align: center;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background: #333;
     color: white;
+    text-align: center;
+    padding: 20px 0;
     margin-top: 40px;
 }
